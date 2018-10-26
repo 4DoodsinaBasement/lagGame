@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cameraMove : MonoBehaviour 
 {
-	public float cameraSpeed = 1f;
+	public float cameraSpeed = 3f;
 
 	// Use this for initialization
 	void Start () 
