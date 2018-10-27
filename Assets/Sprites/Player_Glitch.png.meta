@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 577c0c9109ba32e45bdceb0f528e4241
+guid: 551795e2bd970874c894cfc91ad027b0
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Setting Titles_0
-    21300002: Setting Titles_1
-    21300004: Setting Titles_2
-    21300006: Setting Titles_3
-    21300008: Setting Titles_4
+    21300000: Player_Glitch_0
+    21300002: Player_Glitch_1
+    21300004: Player_Glitch_2
+    21300006: Player_Glitch_3
+    21300008: Player_Glitch_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 14
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,101 +111,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Setting Titles_0
+      name: Player_Glitch_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 30
-        height: 6
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c532c8a8c17dd604c806cfdc56da49b1
+      spriteID: 2eef980a674f8004f9a1a04f28c06c3e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setting Titles_1
+      name: Player_Glitch_1
       rect:
         serializedVersion: 2
-        x: 40
-        y: 4
-        width: 30
-        height: 10
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0b6716537ad94149b6744dfbcf543d1
+      spriteID: 2b26fc2c4461c5c41a5232d160e82443
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setting Titles_2
+      name: Player_Glitch_2
       rect:
         serializedVersion: 2
-        x: 76
-        y: 4
-        width: 30
-        height: 30
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d34691f624f484fab596a33ffbf922
+      spriteID: 1f9b492475fe38848b99ae1713f18154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setting Titles_3
+      name: Player_Glitch_3
       rect:
         serializedVersion: 2
-        x: 112
-        y: 4
-        width: 30
-        height: 30
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 538873b65a640cc4da09fe8aea03e364
+      spriteID: f942ebbe4b4d6284e9fabc06faa1b472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Setting Titles_4
+      name: Player_Glitch_4
       rect:
         serializedVersion: 2
-        x: 148
-        y: 4
-        width: 30
-        height: 30
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f5dc6dce0a5c44a8ee8a64ebd92256
+      spriteID: 85d1b4f78989d7c4daef98b46021ecf3
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ae46eb70f5c89614ab1d55498edd1ffc
+    spriteID: 74c0bd97d03b7134ca86f8af4d4fbf16
     vertices: []
     indices: 
     edges: []
