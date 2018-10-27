@@ -4,25 +4,47 @@ using UnityEngine;
 
 public class LagStream : MonoBehaviour
 {
-	public float globalLagTime = 0.0f;
-	public PlayerMove playerScript;
+	public float globalLagTime = 0.2f;
+	public GameObject player;
 	static List<LagObject> commandList = new List<LagObject>();
+	PlayerMove playerScript;
 	
 	// Use this for initialization
 	void Start ()
 	{
+		playerScript = player.GetComponent<PlayerMove>();
 		Debug_ShowCommandList();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		UpdateCommandListLags();
+		if (Input.GetKeyDown(KeyCode.Return)) { globalLagTime = -1; }
 		
+		UpdateCommandListLags();
+
 		if (commandList.Count > 0)
-		if (Time.time >= commandList[0].GetStartTime() + commandList[0].GetDelay())
 		{
-			playerScript.RunCommand(GetNextLagObject());
+			if (globalLagTime < 0.0f)
+			{
+				globalLagTime = 0.0f;
+
+				foreach (LagObject command in commandList)
+				{
+					switch (command.GetCommand())
+					{
+						case "move left" : player.transform.Translate(-0.2f,0,0); break;
+						case "move right" : player.transform.Translate(0.2f,0,0); break;
+						case "jump" : player.transform.Translate(0,1,0); break;
+					}
+				}
+
+				commandList.Clear();
+			}
+			else if (Time.time >= commandList[0].GetStartTime() + commandList[0].GetDelay())
+			{
+				playerScript.RunCommand(GetNextLagObject());
+			}
 		}
 	}
 
@@ -44,7 +66,7 @@ public class LagStream : MonoBehaviour
 		}
 		else
 		{
-			nextCommand = new LagObject(null, 0, 0);
+			nextCommand = null;
 		}
 		
 		Debug.Log(nextCommand.GetCommand() + " " + nextCommand.GetStartTime() + " " + nextCommand.GetDelay());
