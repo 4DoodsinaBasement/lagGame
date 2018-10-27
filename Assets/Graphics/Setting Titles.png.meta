@@ -103,12 +103,12 @@ TextureImporter:
       name: Setting Titles_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 32
-        height: 7
+        x: 4
+        y: 4
+        width: 30
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,12 +123,12 @@ TextureImporter:
       name: Setting Titles_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 3
-        width: 32
-        height: 11
+        x: 40
+        y: 4
+        width: 30
+        height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,12 +143,12 @@ TextureImporter:
       name: Setting Titles_2
       rect:
         serializedVersion: 2
-        x: 75
-        y: 3
-        width: 32
-        height: 32
+        x: 76
+        y: 4
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: Setting Titles_3
       rect:
         serializedVersion: 2
-        x: 111
-        y: 3
-        width: 32
-        height: 32
+        x: 112
+        y: 4
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,12 +183,12 @@ TextureImporter:
       name: Setting Titles_4
       rect:
         serializedVersion: 2
-        x: 147
-        y: 3
-        width: 32
-        height: 32
+        x: 148
+        y: 4
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
