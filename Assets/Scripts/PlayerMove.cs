@@ -8,20 +8,18 @@ public class PlayerMove : MonoBehaviour
 	
 	
 	public float runSpeed = 40f;
-	float horizontalMove = 0f;
-	bool jump = false;
-	
+	public float jumpForce = 15;
+	[Range(0, .3f)] public float smooth = .05f;
+    public bool airControl = true;							// Whether or not a player can steer while jumping;
+	public LayerMask itsGround;							// A mask determining what is ground to the character
+	public Transform groundCheck;
 
-	[SerializeField] private float jumpForce = 400f;	
-	private Rigidbody2D rigidBody;
-	[Range(0, .3f)] [SerializeField] private float smooth = .05f;
-	private Vector3 velocity = Vector3.zero;
-	private bool facingRight = true;
-	private bool grounded;
-    [SerializeField] private bool airControl = true;							// Whether or not a player can steer while jumping;
-	[SerializeField] private LayerMask itsGround;							// A mask determining what is ground to the character
-	[SerializeField] private Transform groundCheck;
-	private Vector2 collision = new Vector2(1f, 0.2f);
+	float horizontalMove = 0f;
+	Rigidbody2D rigidBody;
+	Vector3 velocity = Vector3.zero;
+	bool facingRight = true;
+	bool grounded;
+	Vector2 collision = new Vector2(1f, 0.2f);
 
 
 	
