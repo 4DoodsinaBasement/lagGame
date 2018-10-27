@@ -16,8 +16,8 @@ public class playerEdgeCollider : MonoBehaviour
 		Vector3 playerSize = GetComponent<Renderer>().bounds.size;
 
 		this.transform.position = new Vector3(
-		Mathf.Clamp(this.transform.position.x, leftBorder + playerSize.x / 2, rightBorder - playerSize.x / 2),
-		Mathf.Clamp(this.transform.position.y, topBorder + playerSize.y / 2, bottomBorder - playerSize.y / 2),
+		Mathf.Clamp(this.transform.position.x, leftBorder + playerSize.x / 4, rightBorder - playerSize.x / 4),
+		Mathf.Clamp(this.transform.position.y, topBorder + playerSize.y / 4, bottomBorder - playerSize.y / 4),
 		this.transform.position.z
 		);
 
