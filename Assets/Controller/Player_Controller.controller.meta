@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animations/Panel.controller.meta
 <<<<<<< HEAD:Assets/Animations/Slime_2.controller.meta
 guid: ac4baafe4024d2a4bb5bc6065bb916e3
 =======
 guid: 82b9dfa5aec08a24a834f432180ec609
 >>>>>>> e933e1e3fedf990effa38769286d558522e8a149:Assets/Animations/Panel.controller.meta
+=======
+guid: 7157abca11cdb644e893fb6f77984629
+>>>>>>> 28c9487ce5e68c02a7c65964f74e4e93f1bcc08e:Assets/Controller/Player_Controller.controller.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000
