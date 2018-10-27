@@ -5,7 +5,7 @@ using UnityEngine;
 public class LagStream : MonoBehaviour
 {
 	public float globalLagTime = 0.0f;
-	public testMove playerScript;
+	public PlayerMove playerScript;
 	static List<LagObject> commandList = new List<LagObject>();
 	
 	// Use this for initialization
