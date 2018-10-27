@@ -32,7 +32,7 @@ public class Death : MonoBehaviour {
         CheckCollision();
         if (LeftCollision && RightCollision)
         {
-            SceneManager.LoadScene("Animation_Scene");
+            SceneManager.LoadScene("Level 1");
         }
 
     }

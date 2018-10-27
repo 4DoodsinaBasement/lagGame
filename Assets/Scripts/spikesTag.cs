@@ -19,7 +19,7 @@ public class spikesTag : MonoBehaviour {
     {
         if (collision.gameObject.tag == "spike")
         {
-            SceneManager.LoadScene("Animation_Scene");
+            SceneManager.LoadScene("Level 1");
         }
     }
 }

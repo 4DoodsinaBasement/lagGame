@@ -51,5 +51,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cfcd7e7ea7f7740946f9110d4e541a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalLagTime: 0.7
-  playerScript: {fileID: 0}
+  globalLagTime: 0
+  player: {fileID: 0}
