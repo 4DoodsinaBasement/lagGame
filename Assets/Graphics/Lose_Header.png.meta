@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-guid: becbd3c7f8f314a47975984040a2d9b6
+guid: 21be7a31892c52648a41ebbbba053ce1
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Buttons_0
-    21300002: Buttons_1
-    21300004: Buttons_2
-    21300006: Buttons_3
-    21300008: Buttons_4
-    21300010: Buttons_5
-    21300012: Buttons_6
-    21300014: Buttons_7
+    21300000: Lose_Header_0
+    21300002: Lose_Header_1
+    21300004: Lose_Header_2
+    21300006: Lose_Header_3
+    21300008: Lose_Header_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -53,7 +50,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Buttons_0
+      name: Lose_Header_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 22
-        width: 26
-        height: 10
+        x: 4
+        y: 4
+        width: 47
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,19 +114,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a3bb200197df954c82aec81e04736da
+      spriteID: 8dc058d4682760546bc5a055a60afd77
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_1
+      name: Lose_Header_1
       rect:
         serializedVersion: 2
-        x: 43
-        y: 22
-        width: 25
-        height: 11
+        x: 57
+        y: 4
+        width: 47
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +134,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5404254313dc57429900d1cb913457d
+      spriteID: 46e6a1c5f0fbb86488d28e02dafcefc5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_2
+      name: Lose_Header_2
       rect:
         serializedVersion: 2
-        x: 79
-        y: 22
-        width: 25
-        height: 11
+        x: 110
+        y: 4
+        width: 47
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +154,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdc85223d29940b46999d2fb177ed400
+      spriteID: 80bf10e2b173cd749b3d64a5843ca757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_3
+      name: Lose_Header_3
       rect:
         serializedVersion: 2
-        x: 115
-        y: 22
-        width: 25
-        height: 11
+        x: 163
+        y: 4
+        width: 47
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +174,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eee4c67a4896924fb9a03dd7e8ef5d2
+      spriteID: f7269d09bf6eccd468f4db2a0e2d8e47
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_4
+      name: Lose_Header_4
       rect:
         serializedVersion: 2
-        x: 6
-        y: 7
-        width: 26
-        height: 10
+        x: 216
+        y: 4
+        width: 47
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,67 +194,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c05f0153cfc8bbd409c6431e9650c4b7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_5
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 6
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be77de552a6a8a64b81c031eba061504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_6
-      rect:
-        serializedVersion: 2
-        x: 79
-        y: 6
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 852dbf1de331b0c4093cf22bddd08f7a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_7
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 6
-        width: 25
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1d66e8582765c1e4dbfb4b820c52f794
+      spriteID: e3da5f969272ed74798ccfd248105db4
       vertices: []
       indices: 
       edges: []
@@ -265,7 +202,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 8aafd040cddf0ae40aba877ef75f9bc6
+    spriteID: 52ea4f0263e2761419657b0e9201da9d
     vertices: []
     indices: 
     edges: []
