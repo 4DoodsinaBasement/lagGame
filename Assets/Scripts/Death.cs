@@ -7,12 +7,12 @@ public class Death : MonoBehaviour {
 
 	public bool touchingBox = false;
 	public bool touchingWall = false; 
-
+	public string scene = "Main_Menu";
 	void FixedUpdate()
 	{
 		if (touchingBox && touchingWall)
 		{
-			SceneManager.LoadScene("Level 1");
+			SceneManager.LoadScene(scene);
 		}
 	}
 	private void OnTriggerEnter2D(Collider2D collider)

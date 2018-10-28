@@ -40,19 +40,19 @@ public class PlayerMove : MonoBehaviour
 			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 			{
 				LagManager.AddNewCommand(new LagObject("move left", Time.time, LagManager.globalLagTime));
-				//Debug.Log("Player wants to move left");
+				Debug.Log("Player wants to move left");
 			}
 
 			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 			{ 
 				LagManager.AddNewCommand(new LagObject("move right", Time.time, LagManager.globalLagTime));
-				//Debug.Log("Player wants to move right");
+				Debug.Log("Player wants to move right");
 			}
 
 			if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
 			{ 
 				LagManager.AddNewCommand(new LagObject("jump", Time.time, LagManager.globalLagTime));
-				//Debug.Log("Player wants to jump"); 
+				Debug.Log("Player wants to jump"); 
 			}
 
 			UpdateIdleAnimation();
@@ -105,7 +105,7 @@ public class PlayerMove : MonoBehaviour
 
 	void UpdateIdleAnimation()
 	{
-		if (rigidBody.velocity == new Vector2(0,0))
+		if (rigidBody.velocity == new Vector2(0,0) && Time.time > 1.0f && animator.GetInteger("AnimState") != 6)
 		{
 			animator.SetInteger("AnimState", 1);
 		}
