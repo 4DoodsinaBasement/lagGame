@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 1753806940}
   - component: {fileID: 1753806939}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Player_Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +766,11 @@ Animator:
   m_GameObject: {fileID: 1753806937}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
+<<<<<<< HEAD
   m_Controller: {fileID: 9100000, guid: faeb0ece5ffa3f240ace280c034ef1f4, type: 2}
+=======
+  m_Controller: {fileID: 9100000, guid: 206191396367fcd4a812fbbd91d7b18d, type: 2}
+>>>>>>> 28c9487ce5e68c02a7c65964f74e4e93f1bcc08e
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1001,7 +1005,7 @@ Animator:
   m_GameObject: {fileID: 2008722383}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5f6268670103104889bd7149772b40a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 94dd10a61a1977e429ea0f063bdf8c48, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
