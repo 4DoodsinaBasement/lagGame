@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameraMove : MonoBehaviour 
+public class cameraMove : MonoBehaviour
 {
 	public float cameraSpeed = 3f;
 
 	// Use this for initialization
-	void Start () 
+	void Start()
 	{
 
 	}
-	
+
 	// Update is called once per frame
-	void FixedUpdate () 
+	void FixedUpdate()
 	{
-		transform.Translate(cameraSpeed * 0.01f, 0, 0);
+		if (transform.position.x < 120)
+		{
+			transform.Translate(cameraSpeed * 0.01f, 0, 0);
+		}
 	}
 }
