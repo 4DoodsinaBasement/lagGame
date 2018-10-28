@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
 	public Transform groundCheck;
 	
 	LagStream LagManager;
+	Animator animator;
 
 	float horizontalMove = 0f;
 	Rigidbody2D rigidBody;
@@ -26,22 +27,35 @@ public class PlayerMove : MonoBehaviour
 	{
 		LagManager = GameObject.Find("Lag Manager").GetComponent<LagStream>();
 		rigidBody = GetComponent<Rigidbody2D>();
+
+		animator = GetComponent<Animator>();
 	}
 
 	void FixedUpdate()
 	{	
 		CheckCollision();
 
-		if (grounded || airControl)
+		if (/*grounded || airControl ||*/ true)
 		{
 			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-			{ LagManager.AddNewCommand(new LagObject("move left", Time.time, LagManager.globalLagTime)); }
+			{
+				LagManager.AddNewCommand(new LagObject("move left", Time.time, LagManager.globalLagTime));
+				//Debug.Log("Player wants to move left");
+			}
 
 			if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-			{ LagManager.AddNewCommand(new LagObject("move right", Time.time, LagManager.globalLagTime)); }
+			{ 
+				LagManager.AddNewCommand(new LagObject("move right", Time.time, LagManager.globalLagTime));
+				//Debug.Log("Player wants to move right");
+			}
 
 			if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space))
-			{ LagManager.AddNewCommand(new LagObject("jump", Time.time, LagManager.globalLagTime)); }
+			{ 
+				LagManager.AddNewCommand(new LagObject("jump", Time.time, LagManager.globalLagTime));
+				//Debug.Log("Player wants to jump"); 
+			}
+
+			UpdateIdleAnimation();
 		}
 	}
 
@@ -61,7 +75,8 @@ public class PlayerMove : MonoBehaviour
 	void MoveLeft ()
 	{
 		if (facingRight) { Flip(); }
-		
+		animator.SetInteger("AnimState", 2);
+
 		Vector3 targetVelocity = new Vector2(runSpeed * Time.fixedDeltaTime * -10f, rigidBody.velocity.y);
 		// And then smoothing it out and applying it to the character
 		rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velocity, smooth);
@@ -70,6 +85,7 @@ public class PlayerMove : MonoBehaviour
 	void MoveRight ()
 	{
 		if (!facingRight) { Flip(); }
+		animator.SetInteger("AnimState", 2);
 		
 		Vector3 targetVelocity = new Vector2(runSpeed * Time.fixedDeltaTime * 10f, rigidBody.velocity.y);
 		// And then smoothing it out and applying it to the character
@@ -80,9 +96,18 @@ public class PlayerMove : MonoBehaviour
 	{
 		if (grounded)
 		{
-            // Add a vertical force to the player.
+            animator.SetInteger("AnimState", 3);
+			// Add a vertical force to the player.
             grounded = false;
             rigidBody.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+		}
+	}
+
+	void UpdateIdleAnimation()
+	{
+		if (rigidBody.velocity == new Vector2(0,0))
+		{
+			animator.SetInteger("AnimState", 1);
 		}
 	}
 

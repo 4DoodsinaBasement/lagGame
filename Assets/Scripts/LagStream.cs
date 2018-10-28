@@ -29,6 +29,8 @@ public class LagStream : MonoBehaviour
 		UpdateLagHealth();
 		UpdateCommandListLags();
 
+		float flux = Random.Range(-0.3f,0.3f);
+
 		if (commandList.Count > 0)
 		{
 			if (globalLagTime < 0.0f)
@@ -47,7 +49,7 @@ public class LagStream : MonoBehaviour
 
 				commandList.Clear();
 			}
-			else if (Time.time >= commandList[0].GetStartTime() + commandList[0].GetDelay())
+			else if (Time.time >= commandList[0].GetStartTime() + (commandList[0].GetDelay() ))
 			{
 				playerScript.RunCommand(GetNextLagObject());
 			}
@@ -75,7 +77,6 @@ public class LagStream : MonoBehaviour
 			nextCommand = null;
 		}
 		
-		Debug.Log(nextCommand.GetCommand() + " " + nextCommand.GetStartTime() + " " + nextCommand.GetDelay());
 		return nextCommand;
 	}
 
