@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-	public LagStream LagManager;
-	
-	
 	public float runSpeed = 40f;
 	public float jumpForce = 15;
 	[Range(0, .3f)] public float smooth = .05f;
     public bool airControl = true;							// Whether or not a player can steer while jumping;
 	public LayerMask itsGround;							// A mask determining what is ground to the character
 	public Transform groundCheck;
+	
+	LagStream LagManager;
 
 	float horizontalMove = 0f;
 	Rigidbody2D rigidBody;
@@ -25,6 +24,7 @@ public class PlayerMove : MonoBehaviour
 	
 	void Start()
 	{
+		LagManager = GameObject.Find("Lag Manager").GetComponent<LagStream>();
 		rigidBody = GetComponent<Rigidbody2D>();
 	}
 
