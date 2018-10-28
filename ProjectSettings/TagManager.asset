@@ -8,6 +8,7 @@ TagManager:
   - box
   - winPortal
   - camera
+  - flower
   layers:
   - Default
   - TransparentFX

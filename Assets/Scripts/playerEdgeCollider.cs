@@ -20,11 +20,5 @@ public class playerEdgeCollider : MonoBehaviour
 		Mathf.Clamp(this.transform.position.y, topBorder + playerSize.y / 4, bottomBorder - playerSize.y / 4),
 		this.transform.position.z
 		);
-
-		Debug.Log(leftBorder);
-		Debug.Log(rightBorder);
-		Debug.Log(topBorder);
-		Debug.Log(bottomBorder);
-		Debug.Log(playerSize);
 	}
 }

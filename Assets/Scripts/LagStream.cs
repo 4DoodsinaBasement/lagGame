@@ -5,15 +5,20 @@ using UnityEngine;
 public class LagStream : MonoBehaviour
 {
 	public float globalLagTime = 0.2f;
-	public GameObject player;
-	static List<LagObject> commandList = new List<LagObject>();
+	public GameObject lagHealth;
+	public float maxLag = 1.0f;
+	public float lagStep = 0.001f;
+
+	GameObject player;
 	PlayerMove playerScript;
+	static List<LagObject> commandList = new List<LagObject>();
 	
+
 	// Use this for initialization
 	void Start ()
 	{
+		player = GameObject.Find("Player");
 		playerScript = player.GetComponent<PlayerMove>();
-		Debug_ShowCommandList();
 	}
 	
 	// Update is called once per frame
@@ -21,7 +26,10 @@ public class LagStream : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Return)) { globalLagTime = -1; }
 		
+		UpdateLagHealth();
 		UpdateCommandListLags();
+
+		float flux = Random.Range(-0.3f,0.3f);
 
 		if (commandList.Count > 0)
 		{
@@ -41,7 +49,7 @@ public class LagStream : MonoBehaviour
 
 				commandList.Clear();
 			}
-			else if (Time.time >= commandList[0].GetStartTime() + commandList[0].GetDelay())
+			else if (Time.time >= commandList[0].GetStartTime() + (commandList[0].GetDelay() ))
 			{
 				playerScript.RunCommand(GetNextLagObject());
 			}
@@ -69,7 +77,6 @@ public class LagStream : MonoBehaviour
 			nextCommand = null;
 		}
 		
-		Debug.Log(nextCommand.GetCommand() + " " + nextCommand.GetStartTime() + " " + nextCommand.GetDelay());
 		return nextCommand;
 	}
 
@@ -81,13 +88,13 @@ public class LagStream : MonoBehaviour
 		}
 	}
 
-	public void Debug_ShowCommandList()
+	public void UpdateLagHealth()
 	{
-		string commands = ""; 
-		
-		foreach (LagObject command in commandList)
-		{
-			commands += command.GetCommand() + ", ";
-		}
+		globalLagTime += lagStep / 10;
+		if (globalLagTime > maxLag) { globalLagTime = maxLag; }
+
+		Transform trans = lagHealth.transform;
+		Vector3 scale = new Vector3((globalLagTime / maxLag) * 5, trans.localScale.y, trans.localScale.z);
+		trans.localScale = scale;
 	}
 }
