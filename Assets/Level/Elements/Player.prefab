@@ -205,14 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df609b853adeffe4dbde5d9c3acdf34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LeftCheck: {fileID: 4732770419659372}
-  RightCheck: {fileID: 4037136835642604}
-  itsCamera:
-    serializedVersion: 2
-    m_Bits: 512
-  itsWall:
-    serializedVersion: 2
-    m_Bits: 1024
+  touchingBox: 0
+  touchingWall: 0
+  scene: Main_Menu
 --- !u!114 &114265912790446548
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f3f7bcc3bcc419438c5bf04103d2e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: Lose_Menu
 --- !u!114 &114760844050590858
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c5a2e6e8473bb4599e719b7df1f622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LagManager: {fileID: 0}
   runSpeed: 40
   jumpForce: 15
   smooth: 0.05

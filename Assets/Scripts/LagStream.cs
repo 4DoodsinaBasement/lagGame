@@ -24,7 +24,7 @@ public class LagStream : MonoBehaviour
 	// Update is called once per frame
 	void FixedUpdate ()
 	{
-		if (Input.GetKeyDown(KeyCode.Return)) { globalLagTime = -1; }
+		//if (Input.GetKeyDown(KeyCode.Return)) { globalLagTime = -1; }
 		
 		UpdateLagHealth();
 		UpdateCommandListLags();

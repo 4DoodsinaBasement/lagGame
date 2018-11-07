@@ -7,9 +7,11 @@ public class Death : MonoBehaviour {
 
 	public bool touchingBox = false;
 	public bool touchingWall = false; 
-	public string scene = "Main_Menu";
+	string scene = "Lose_Menu";
 	void FixedUpdate()
 	{
+		Debug.Log("touchingBox: " + touchingBox);
+		Debug.Log("touchingWall" + touchingWall);
 		if (touchingBox && touchingWall)
 		{
 			SceneManager.LoadScene(scene);
@@ -21,17 +23,12 @@ public class Death : MonoBehaviour {
         {	
             touchingWall = true;
         }
-	}
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-		if ( collision.gameObject.tag == "box")
+		if ( collider.gameObject.tag == "box")
         {	
             touchingBox = true;
         }
-    }
-
+		
+	}
 	
 	private void OnTriggerExit2D(Collider2D collider)
 	{
@@ -39,13 +36,17 @@ public class Death : MonoBehaviour {
         {	
             touchingWall = false;
         }
-	}
-
-	private void OnCollisionExit2D(Collision2D collision)
-    {
-		if ( collision.gameObject.tag == "box")
+		if ( collider.gameObject.tag == "box")
         {	
             touchingBox = false;
+        }
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "spike")
+        {
+            SceneManager.LoadScene(scene);
         }
     }
 

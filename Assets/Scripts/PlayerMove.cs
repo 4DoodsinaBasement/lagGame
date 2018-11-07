@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour
 	{	
 		CheckCollision();
 
-		if (/*grounded || airControl ||*/ true)
+		if (grounded || airControl)
 		{
 			if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
 			{

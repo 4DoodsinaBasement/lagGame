@@ -52,4 +52,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalLagTime: 0
-  player: {fileID: 0}
+  lagHealth: {fileID: 0}
+  maxLag: 1
+  lagStep: 0.001
