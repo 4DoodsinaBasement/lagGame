@@ -9,21 +9,21 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Main_Menu.unity
+    path: Assets/Scenes/Menus/Main_Menu.unity
     guid: ca5d22bb47c563349acb34391d51dedf
   - enabled: 1
-    path: Assets/Scenes/Info_Menu.unity
+    path: Assets/Scenes/Menus/Info_Menu.unity
     guid: 4d1a1df4ac5aa094199d068466b76a80
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/Levels/Level 1.unity
     guid: cc3d6b8f0cc4eae40ad5aff14d77626b
   - enabled: 1
-    path: Assets/Scenes/Lose_Menu.unity
+    path: Assets/Scenes/Menus/Lose_Menu.unity
     guid: 192f75243396284498d64719b3e00c0a
   - enabled: 1
-    path: Assets/Scenes/Win_Menu.unity
+    path: Assets/Scenes/Menus/Win_Menu.unity
     guid: a6ac6b076219fa1449284e21bb3501ba
   - enabled: 1
-    path: Assets/Scenes/credit_menu.unity
+    path: Assets/Scenes/Menus/credit_menu.unity
     guid: abbc75e16d408b947beed5c82488c69c
   m_configObjects: {}

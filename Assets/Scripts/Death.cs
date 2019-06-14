@@ -7,7 +7,8 @@ public class Death : MonoBehaviour {
 
 	public bool touchingBox = false;
 	public bool touchingWall = false; 
-	string scene = "Lose_Menu";
+	public bool touchingSpike = false; 
+	public string scene = "Lose_Menu";
 	void FixedUpdate()
 	{
 		Debug.Log("touchingBox: " + touchingBox);
@@ -46,6 +47,7 @@ public class Death : MonoBehaviour {
     {
         if (collision.gameObject.tag == "spike")
         {
+			touchingSpike = true;
             SceneManager.LoadScene(scene);
         }
     }
